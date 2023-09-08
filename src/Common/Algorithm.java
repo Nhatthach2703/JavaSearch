@@ -47,17 +47,6 @@ public class Algorithm {
         };
         return i;
     }
-
-//    public void quickSort(int[] array, int left, int right) {
-//        //Search index of array - vách ngăn
-//        int index = partition(array, left, right);
-//        if (left < index - 1) {
-//            quickSort(array, left, index - 1);
-//        }
-//        if (index < right) {
-//            quickSort(array, index, right);
-//        }
-//    }
     
     public int linearSearch(int[] arr, int target) {
         for (int i = 0; i < arr.length; i++) {
@@ -90,7 +79,7 @@ public class Algorithm {
             int mid = left + (right - left) / 2;
 
             if (arr[mid] == target) {
-                return mid; // The value has been found
+                return mid; // The value has been found --> return mid
             } else if (arr[mid] < target) {
                 left = mid + 1; // -->target is to the right of mid, the left should be updated to mid + 1 to search in the right half of the array.
             } else {
