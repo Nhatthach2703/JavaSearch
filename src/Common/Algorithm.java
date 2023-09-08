@@ -90,15 +90,13 @@ public class Algorithm {
             int mid = left + (right - left) / 2;
 
             if (arr[mid] == target) {
-                return mid;
+                return mid; // The value has been found
             } else if (arr[mid] < target) {
-                left = mid + 1;
+                left = mid + 1; // -->target is to the right of mid, the left should be updated to mid + 1 to search in the right half of the array.
             } else {
-                right = mid - 1;
+                right = mid - 1; // -->target is to the left of mid, it should be updated to mid - 1 to search the left half of the array.
             }
         }
-
         return -1; // target not found
     }
-
 }
